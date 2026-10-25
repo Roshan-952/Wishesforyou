@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A dreamy, magical birthday surprise room for MADHU (DUMBO) with special friendship letters, sweet college memories, and a surprise gift box.">
+  <title>A Magical Birthday Room ✨ | Happy Birthday!</title>
+  
+  <!-- Favicon using a sweet kawaii emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎀</text></svg>">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       BACKGROUND: FLOATING AMBIENT SPARKLES & PETALS CANVAS
+       ====================================================================== -->
+  <div id="sparkleCanvas" class="sparkle-canvas" aria-hidden="true"></div>
+
+  <!-- ======================================================================
+       WELCOME SCREEN OVERLAY
+       Romantic pink welcome gateway with animated teddy bear and floating hearts
+       Easy to customize heading and subtitle text below
+       ====================================================================== -->
+  <section id="welcomeScreen" class="welcome-screen" aria-label="Welcome birthday greeting">
+    <!-- Ambient Floating Hearts Layer inside Welcome Screen -->
+    <div class="welcome-hearts-layer" aria-hidden="true">
+      <span class="welcome-float-heart" style="--drift-x: -25px; --speed: 7s; --delay: 0s; left: 12%;">💗</span>
+      <span class="welcome-float-heart" style="--drift-x: 20px; --speed: 9s; --delay: 1.5s; left: 24%;">💖</span>
+      <span class="welcome-float-heart" style="--drift-x: -15px; --speed: 6.5s; --delay: 3s; left: 38%;">✨</span>
+      <span class="welcome-float-heart" style="--drift-x: 30px; --speed: 10s; --delay: 0.8s; left: 52%;">💕</span>
+      <span class="welcome-float-heart" style="--drift-x: -20px; --speed: 8s; --delay: 2.2s; left: 66%;">🌸</span>
+      <span class="welcome-float-heart" style="--drift-x: 18px; --speed: 7.5s; --delay: 4s; left: 80%;">💗</span>
+      <span class="welcome-float-heart" style="--drift-x: -30px; --speed: 11s; --delay: 1.2s; left: 92%;">✨</span>
+    </div>
+
+    <!-- Glowing Background Aura -->
+    <div class="welcome-glow-aura" aria-hidden="true"></div>
+
+    <!-- Centered Welcome Card Content -->
+    <div class="welcome-container">
+      
+      <!-- Cute Animated DUMBO Elephant Mascot (from assets/images/elephant.jpg) -->
+      <div class="welcome-mascot-wrapper" aria-hidden="true">
+        <div class="welcome-elephant-card">
+          <img src="assets/images/elephant_transparent.png" alt="Cute DUMBO Elephant Mascot" class="welcome-elephant-img" width="130" height="102">
+          <div class="welcome-elephant-shadow"></div>
+        </div>
+      </div>
+
+      <!-- Customizable Main Heading with Pulsing Heart -->
+      <h1 id="welcomeHeading" class="welcome-heading">Happy Birthday, MADHU! <span class="pulsing-heart" aria-hidden="true">🎂</span></h1>
+
+      <!-- Customizable Romantic Subtitle -->
+      <p id="welcomeSubtitle" class="welcome-subtitle">A little birthday surprise made especially for you, DUMBO. 💗</p>
+
+      <!-- Prominent Enter Button -->
+      <div class="welcome-action-wrap">
+        <button id="enterRoomBtn" class="welcome-enter-btn" type="button" aria-label="Enter Our Little World">
+          <span class="btn-text">Enter Our Little World ✨</span>
+          <span class="btn-sparkle" aria-hidden="true">✨</span>
+        </button>
+      </div>
+
+      <!-- Subtle hint for visitor -->
+      <p class="welcome-hint">Click above to unlock your birthday surprise 🎀</p>
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       HEADER / TOP NAVIGATION BAR
+       ====================================================================== -->
+  <header class="top-bar">
+    <a href="#hero" class="brand-badge" aria-label="Birthday Room Home">
+      <span>🎀</span>
+      <span>Birthday Magic</span>
+    </a>
+
+    <!-- Audio toggle button preserved for programmatic compatibility -->
+    <button id="audioToggleBtn" class="is-hidden" style="display:none;" aria-hidden="true"></button>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT CONTAINER
+       ====================================================================== -->
+  <main class="main-wrapper">
+
+    <!-- --------------------------------------------------------------------
+         SECTION 1: HERO & WELCOME ROOM
+         -------------------------------------------------------------------- -->
+    <section id="hero" class="hero-section" aria-labelledby="heroTitle">
+      <div class="hero-sparkle-badge">
+        <span>✨</span>
+        <span>A Special Birthday Celebration</span>
+        <span>✨</span>
+      </div>
+
+      <h1 id="heroTitle" class="hero-title">Happy Birthday, My DUMBO! <span class="pulsing-heart" aria-hidden="true">💖</span></h1>
+      <p class="hero-subtitle">Welcome to your very own magical birthday room <span class="pulsing-heart-subtle" aria-hidden="true">✨</span></p>
+
+      <div class="hero-mascot-row" aria-label="Cute mascots: Teddy bear, Rose, and Sparkles">
+        <span title="DUMBO Elephant">🐘</span>
+        <span title="Rose">🌹</span>
+        <span title="Magic sparkles">✨</span>
+      </div>
+
+      <p class="hero-description">
+        Step inside, take a deep breath, and let the magic begin. You have 5 little notes waiting to be unlocked, 
+        each holding precious memories, and a surprise gift box waiting just for you!
+      </p>
+
+      <a href="#letters" class="cta-button" id="startExploringBtn">
+        <span>💌</span>
+        <span>Discover Your Birthday Surprises</span>
+      </a>
+    </section>
+
+    <!-- Romantic Section Divider -->
+    <div class="romantic-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-badge">🌸 💖 🌸</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 2: FIVE SPECIAL FRIENDSHIP LETTERS
+         Each card represents a numbered letter from 1 to 5
+         -------------------------------------------------------------------- -->
+    <section id="letters" class="letters-section" aria-labelledby="lettersTitle">
+      <div class="section-header">
+        <span class="section-tag">Step One</span>
+        <h2 id="lettersTitle" class="section-title">Five Little Notes for DUMBO 💌</h2>
+        <p class="section-subtitle">
+          A few memories, wishes, and things I wanted you to know.
+        </p>
+      </div>
+
+      <!-- Romantic Progress Tracker Card -->
+      <div class="letters-progress-card">
+        <div class="progress-details">
+          <span class="progress-pill">✨ Surprises Unlocked</span>
+          <span id="lettersProgressText" class="progress-count-text">0 of 5 little surprises discovered 💗</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5" aria-labelledby="lettersProgressText">
+          <div id="lettersProgressBar" class="progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- 5 Envelopes: Responsive Grid (5-in-a-row on desktop) -->
+      <div class="letters-grid" id="lettersGrid">
+        <!-- Note 1 (Available Initially) -->
+        <article class="letter-card is-available" data-letter-id="1" tabindex="0" role="button" aria-label="Open Note 1: Happy Birthday, My DUMBO!">
+          <div class="envelope-art-wrap" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper-slip"></div>
+            <div class="envelope-pocket"></div>
+            <div class="envelope-heart-seal">
+              <span class="seal-heart">🌸</span>
+              <span class="seal-num">1</span>
+            </div>
+            <div class="envelope-lock-icon">🔒</div>
+            <span class="envelope-flower-decor">🌸</span>
+          </div>
+          <div class="letter-card-heading-group">
+            <span class="letter-note-heading">Note 1 🌸</span>
+            <h3 class="letter-title">Happy Birthday, My DUMBO! 💗</h3>
+          </div>
+          <p class="letter-teaser">“Where my heartfelt birthday wishes and blessings for you begin…”</p>
+          <div class="letter-card-footer">
+            <span class="letter-from-tag">From ROSHAN 💌</span>
+            <span class="letter-status-pill">Open Me ✨</span>
+          </div>
+        </article>
+
+        <!-- Note 2 (Locked Initially) -->
+        <article class="letter-card is-locked" data-letter-id="2" tabindex="0" role="button" aria-label="Open Note 2: A Friendship That Never Gave Up">
+          <div class="envelope-art-wrap" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper-slip"></div>
+            <div class="envelope-pocket"></div>
+            <div class="envelope-heart-seal">
+              <span class="seal-heart">🌸</span>
+              <span class="seal-num">2</span>
+            </div>
+            <div class="envelope-lock-icon">🔒</div>
+            <span class="envelope-flower-decor">🌸</span>
+          </div>
+          <div class="letter-card-heading-group">
+            <span class="letter-note-heading">Note 2 🌸</span>
+            <h3 class="letter-title">A Friendship That Never Gave Up</h3>
+          </div>
+          <p class="letter-teaser">“Even through misunderstandings, you never let go of our bond…”</p>
+          <div class="letter-card-footer">
+            <span class="letter-from-tag">From ROSHAN 💌</span>
+            <span class="letter-status-pill">Locked 🔒</span>
+          </div>
+        </article>
+
+        <!-- Note 3 (Locked Initially) -->
+        <article class="letter-card is-locked" data-letter-id="3" tabindex="0" role="button" aria-label="Open Note 3: Those First Few Months of College">
+          <div class="envelope-art-wrap" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper-slip"></div>
+            <div class="envelope-pocket"></div>
+            <div class="envelope-heart-seal">
+              <span class="seal-heart">🌸</span>
+              <span class="seal-num">3</span>
+            </div>
+            <div class="envelope-lock-icon">🔒</div>
+            <span class="envelope-flower-decor">🌸</span>
+          </div>
+          <div class="letter-card-heading-group">
+            <span class="letter-note-heading">Note 3 🌸</span>
+            <h3 class="letter-title">Those First Few Months of College</h3>
+          </div>
+          <p class="letter-teaser">“Looking back at our first few months of college together…”</p>
+          <div class="letter-card-footer">
+            <span class="letter-from-tag">From ROSHAN 💌</span>
+            <span class="letter-status-pill">Locked 🔒</span>
+          </div>
+        </article>
+
+        <!-- Note 4 (Locked Initially) -->
+        <article class="letter-card is-locked" data-letter-id="4" tabindex="0" role="button" aria-label="Open Note 4: Whenever You Need Me, DUMBO">
+          <div class="envelope-art-wrap" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper-slip"></div>
+            <div class="envelope-pocket"></div>
+            <div class="envelope-heart-seal">
+              <span class="seal-heart">🌸</span>
+              <span class="seal-num">4</span>
+            </div>
+            <div class="envelope-lock-icon">🔒</div>
+            <span class="envelope-flower-decor">🌸</span>
+          </div>
+          <div class="letter-card-heading-group">
+            <span class="letter-note-heading">Note 4 🌸</span>
+            <h3 class="letter-title">Whenever You Need Me, DUMBO</h3>
+          </div>
+          <p class="letter-teaser">“A promise that you will always have a friend in me…”</p>
+          <div class="letter-card-footer">
+            <span class="letter-from-tag">From ROSHAN 💌</span>
+            <span class="letter-status-pill">Locked 🔒</span>
+          </div>
+        </article>
+
+        <!-- Note 5 (Locked Initially) -->
+        <article class="letter-card is-locked" data-letter-id="5" tabindex="0" role="button" aria-label="Open Note 5: One Last Little Secret">
+          <div class="envelope-art-wrap" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper-slip"></div>
+            <div class="envelope-pocket"></div>
+            <div class="envelope-heart-seal">
+              <span class="seal-heart">🌸</span>
+              <span class="seal-num">5</span>
+            </div>
+            <div class="envelope-lock-icon">🔒</div>
+            <span class="envelope-flower-decor">🌸</span>
+          </div>
+          <div class="letter-card-heading-group">
+            <span class="letter-note-heading">Note 5 🌸</span>
+            <h3 class="letter-title">One Last Little Secret</h3>
+          </div>
+          <p class="letter-teaser">“The final little truth before your grand birthday reveal…”</p>
+          <div class="letter-card-footer">
+            <span class="letter-from-tag">From ROSHAN 💌</span>
+            <span class="letter-status-pill">Locked 🔒</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Romantic Section Divider -->
+    <div class="romantic-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-badge">🎀 ✨ 🎁</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 3: THE BIRTHDAY SURPRISE GIFT BOX & PHOTOGRAPH
+         Unlocks the special photograph reveal after all 5 letters are opened
+         -------------------------------------------------------------------- -->
+    <section id="gift" class="gift-section" aria-labelledby="giftTitle">
+      <div class="section-header">
+        <span class="section-tag">Grand Finale</span>
+        <h2 id="giftTitle" class="section-title">One Last Surprise for You, DUMBO! 🎁</h2>
+        <p class="section-subtitle">
+          There's something special waiting inside, MADHU. 💗
+        </p>
+      </div>
+
+      <!-- Gift Box Main Card Wrapper (is-locked initially) -->
+      <div class="gift-box-wrapper is-locked" id="giftBoxContainer">
+        
+        <!-- Status Indicator / Notice -->
+        <div class="gift-status-indicator" id="giftStatusIndicator">
+          <div class="gift-status-badge-wrap">
+            <span class="gift-lock-badge" id="giftLockBadge">Locked 🔒</span>
+            <span class="gift-unlocked-badge" id="giftUnlockedBadge" style="display: none;">Unlocked ✨</span>
+          </div>
+          <!-- Instruction text: displays requested copy once unlocked -->
+          <p class="gift-instruction" id="giftInstructionText">
+            Open all 5 little notes above to unlock this birthday surprise! 💌
+          </p>
+          <!-- Elegant Surprise Message (appears when lid opens) -->
+          <div id="giftSurpriseMessage" class="gift-surprise-message is-hidden" aria-live="polite">
+            <span class="surprise-sparkle" aria-hidden="true">✨</span>
+            <span class="surprise-text" id="giftSurpriseText">A little surprise, just for you... 💗</span>
+            <span class="surprise-sparkle" aria-hidden="true">✨</span>
+          </div>
+        </div>
+
+        <!-- Soft Pink Circular Platform Stage -->
+        <div class="gift-stage-platform" id="giftStagePlatform">
+          <!-- Ambient Platform Glow Disc -->
+          <div class="platform-glow-disc" aria-hidden="true"></div>
+          <!-- Soft Pink Platform Surface with bevel -->
+          <div class="platform-surface" aria-hidden="true"></div>
+
+          <!-- Interactive Gift Box Container (Clickable) -->
+          <div 
+            class="gift-box-interactive" 
+            id="giftBoxInteractive" 
+            tabindex="0" 
+            role="button" 
+            aria-label="Interactive Birthday Gift Box: Click to open your surprise"
+          >
+            <!-- Particle Confetti & Hearts Burst Container -->
+            <div class="gift-confetti-container" id="giftConfettiContainer" aria-hidden="true"></div>
+
+            <!-- Warm Pink Glowing Light from Inside the Box -->
+            <div class="gift-inner-glow" id="giftInnerGlow" aria-hidden="true"></div>
+
+            <!-- Inline SVG Vector Gift Box with Lid, Bow, Ribbon & Heart Pattern -->
+            <svg 
+              class="gift-box-svg" 
+              id="giftBoxSvg" 
+              viewBox="0 0 260 250" 
+              width="230" 
+              height="220" 
+              xmlns="http://www.w3.org/2000/svg" 
+              aria-hidden="true"
+            >
+              <defs>
+                <!-- Box Body Gradient -->
+                <linearGradient id="giftBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFD1E5"/>
+                  <stop offset="45%" stop-color="#FFB6D5"/>
+                  <stop offset="100%" stop-color="#FFA1C8"/>
+                </linearGradient>
+
+                <!-- Box Lid Gradient -->
+                <linearGradient id="giftLidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFE0EE"/>
+                  <stop offset="50%" stop-color="#FFBEDC"/>
+                  <stop offset="100%" stop-color="#FFA8CE"/>
+                </linearGradient>
+
+                <!-- Deep Rose Ribbon Gradient -->
+                <linearGradient id="giftRibbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF5D9E"/>
+                  <stop offset="50%" stop-color="#E83E78"/>
+                  <stop offset="100%" stop-color="#A81D4C"/>
+                </linearGradient>
+
+                <!-- Soft Heart Pattern on Box Surface -->
+                <pattern id="giftHeartPattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M12 16 C12 16 6.5 12 6.5 8.5 C6.5 6 8.5 4.5 11 7 C13.5 4.5 15.5 6 15.5 8.5 C15.5 12 12 16 12 16 Z" fill="rgba(255, 255, 255, 0.42)"/>
+                </pattern>
+              </defs>
+
+              <!-- Box Base Body -->
+              <g class="gift-svg-body" id="giftSvgBody">
+                <!-- Base Box Rectangle -->
+                <rect x="35" y="95" width="190" height="135" rx="14" fill="url(#giftBodyGrad)" stroke="#FFA0C5" stroke-width="2"/>
+                <!-- Repeating Subtle Heart Pattern -->
+                <rect x="35" y="95" width="190" height="135" rx="14" fill="url(#giftHeartPattern)"/>
+                <!-- Deep Rose Vertical Ribbon on Base -->
+                <rect class="ribbon-vertical-base" x="114" y="95" width="32" height="135" fill="url(#giftRibbonGrad)"/>
+                <!-- Gold Pinstripe Accents on Ribbon -->
+                <line x1="114" y1="95" x2="114" y2="230" stroke="#FFD166" stroke-width="1.5" opacity="0.75"/>
+                <line x1="146" y1="95" x2="146" y2="230" stroke="#FFD166" stroke-width="1.5" opacity="0.75"/>
+                <!-- Magic Sparkles on Box Body -->
+                <text x="56" y="145" font-size="14" fill="#FFD166" opacity="0.9">✨</text>
+                <text x="180" y="185" font-size="14" fill="#FFD166" opacity="0.9">✨</text>
+                <text x="65" y="205" font-size="12" fill="#E83E78" opacity="0.7">💖</text>
+              </g>
+
+              <!-- Box Lid & Bow Group (Animates Upward on Opening) -->
+              <g class="gift-svg-lid-group" id="giftSvgLidGroup">
+                <!-- Lid Overhang Rectangle -->
+                <rect class="gift-svg-lid-rect" x="25" y="70" width="210" height="34" rx="8" fill="url(#giftLidGrad)" stroke="#FFA0C5" stroke-width="2"/>
+                <!-- Horizontal Ribbon on Lid -->
+                <rect class="ribbon-horizontal-lid" x="25" y="80" width="210" height="14" fill="url(#giftRibbonGrad)"/>
+                <!-- Vertical Ribbon on Lid -->
+                <rect class="ribbon-vertical-lid" x="114" y="70" width="32" height="34" fill="url(#giftRibbonGrad)"/>
+                <line x1="114" y1="70" x2="114" y2="104" stroke="#FFD166" stroke-width="1.5" opacity="0.75"/>
+                <line x1="146" y1="70" x2="146" y2="104" stroke="#FFD166" stroke-width="1.5" opacity="0.75"/>
+
+                <!-- Deep Rose Dimensional Bow (Loosens and unfolds) -->
+                <g class="gift-svg-bow" id="giftSvgBow">
+                  <!-- Left Bow Loop -->
+                  <path class="bow-loop bow-loop-left" d="M120 70 C95 38 55 35 68 64 C76 80 108 77 122 72 Z" fill="url(#giftRibbonGrad)" stroke="#9E1844" stroke-width="1.5"/>
+                  <path class="bow-highlight-left" d="M115 67 C98 45 75 44 82 58 C87 69 108 67 115 67 Z" fill="#FF8EB8" opacity="0.6"/>
+
+                  <!-- Right Bow Loop -->
+                  <path class="bow-loop bow-loop-right" d="M140 70 C165 38 205 35 192 64 C184 80 152 77 138 72 Z" fill="url(#giftRibbonGrad)" stroke="#9E1844" stroke-width="1.5"/>
+                  <path class="bow-highlight-right" d="M145 67 C162 45 185 44 178 58 C173 69 152 67 145 67 Z" fill="#FF8EB8" opacity="0.6"/>
+
+                  <!-- Left Bow Ribbon Tail -->
+                  <path class="bow-tail bow-tail-left" d="M118 78 C98 96 78 114 68 132 C80 126 96 110 124 82 Z" fill="url(#giftRibbonGrad)"/>
+                  <!-- Right Bow Ribbon Tail -->
+                  <path class="bow-tail bow-tail-right" d="M142 78 C162 96 182 114 192 132 C180 126 164 110 136 82 Z" fill="url(#giftRibbonGrad)"/>
+
+                  <!-- Center Knot with Sparkly Heart Jewel -->
+                  <circle cx="130" cy="73" r="14" fill="#8E143C"/>
+                  <circle cx="130" cy="73" r="11" fill="url(#giftRibbonGrad)"/>
+                  <circle cx="127" cy="70" r="3" fill="#FFFFFF" opacity="0.8"/>
+                  <text x="123" y="77" font-size="12" fill="#FFD166">💖</text>
+                </g>
+              </g>
+            </svg>
+
+            <!-- Tap Hint for Visitor -->
+            <span class="gift-tap-hint" id="giftTapHint" aria-hidden="true">Tap box to open! 🎀</span>
+          </div>
+        </div>
+
+        <!-- Action Button (Disabled until all 5 letters unlocked) -->
+        <div class="gift-action-wrap">
+          <button 
+            id="openGiftBtn" 
+            class="gift-trigger-btn" 
+            type="button" 
+            aria-label="Open Your Surprise" 
+            disabled
+          >
+            <span>🎀</span>
+            <span id="openGiftBtnText">Open Your Surprise 🎀</span>
+            <span>✨</span>
+          </button>
+        </div>
+
+        <!-- ==================================================================
+             FINAL BIRTHDAY NOTE BENEATH THE GIFT BOX
+             Revealed with gentle fade-in after picture popup is closed for the first time
+             ================================================================== -->
+        <div id="finalBirthdayNote" class="final-birthday-note is-hidden" aria-labelledby="finalNoteHeading" aria-hidden="true">
+          <article class="final-note-card letter-paper-card">
+            <div class="letter-paper-header">
+              <span class="letter-badge">One Last Birthday Note 💌</span>
+              <span class="letter-date">A Message from ROSHAN 🤝💗</span>
+            </div>
+
+            <div class="modal-letter-heading-group">
+              <h3 id="finalNoteHeading" class="final-note-heading">One Last Little Message for You 💌</h3>
+            </div>
+
+            <div class="final-note-body letter-body-content">
+              <p class="letter-para">
+                MADHU, no matter where life takes us, I hope we always keep the beautiful memories we've made and continue creating many more. Thank you for being part of my college days and my journey. Keep smiling, keep growing, and never forget that you have a friend in me. Happy Birthday, DUMBO! ❤️ — ROSHAN
+              </p>
+            </div>
+
+            <div class="letter-signature-block">
+              <p class="letter-closing">Always and forever your friend,</p>
+              <p class="letter-signature">ROSHAN ❤️</p>
+              <span class="letter-from-roshan-badge">From ROSHAN with endless care 🎀</span>
+            </div>
+
+            <div class="final-note-actions-row">
+              <button id="viewPictureAgainBtn" class="modal-btn modal-btn-primary" type="button" aria-label="View Surprise Picture Again">
+                <span>📷</span>
+                <span>View Surprise Picture Again 🌸</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       LETTER READER MODAL
+       Generous, readable, comfortable on mobile and desktop
+       ====================================================================== -->
+  <div id="letterModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalLetterTitle" aria-hidden="true">
+    <!-- Celebratory floating heart particles container -->
+    <div id="letterHeartBurst" class="letter-heart-burst" aria-hidden="true"></div>
+
+    <div class="modal-dialog letter-modal-dialog">
+      <!-- Close Icon Button -->
+      <button id="modalCloseIconBtn" class="modal-close-icon" type="button" aria-label="Close letter">✕</button>
+
+      <!-- Beautiful Soft Paper Birthday Note -->
+      <article class="letter-paper-card">
+        <div class="letter-paper-header">
+          <span id="modalLetterBadge" class="letter-badge">Note 1 of 5 💌</span>
+          <span id="modalLetterDate" class="letter-date">A Message from Your Friend</span>
+        </div>
+
+        <div class="modal-letter-heading-group">
+          <span id="modalNoteHeading" class="modal-note-heading">Note 1 🌸</span>
+          <h3 id="modalLetterTitle" class="modal-letter-title">Happy Birthday, My DUMBO! 💗</h3>
+        </div>
+        
+        <p id="modalLetterGreeting" class="letter-greeting">Happy Birthday, MADHU! 🎂💗</p>
+
+        <div id="modalLetterBody" class="letter-body-content">
+          <!-- Content dynamically populated from central lettersData in js/script.js -->
+        </div>
+
+        <div class="letter-signature-block">
+          <p id="modalLetterClosing" class="letter-closing">Always your friend,</p>
+          <p id="modalLetterSignature" class="letter-signature">ROSHAN ❤️</p>
+          <span class="letter-from-roshan-badge">From ROSHAN with care 🎀</span>
+        </div>
+      </article>
+
+      <!-- Modal Action Buttons (Close and Continue) -->
+      <div class="modal-actions-row">
+        <button id="modalCloseBtn" class="modal-btn modal-btn-secondary" type="button">
+          <span>Close ✕</span>
+        </button>
+        <button id="modalContinueBtn" class="modal-btn modal-btn-primary" type="button">
+          <span id="modalContinueBtnText">Read Next Note 💌</span>
+          <span class="btn-arrow" aria-hidden="true">➔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       PICTURE REVEAL POPUP MODAL
+       Centered modal displaying the actual photograph from assets/images/surprise.png
+       ====================================================================== -->
+  <div id="pictureModalOverlay" class="modal-overlay picture-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pictureModalCaption" aria-hidden="true">
+    <!-- Celebratory floating sparkles & hearts container -->
+    <div id="pictureSparkleBurst" class="picture-sparkle-burst" aria-hidden="true"></div>
+
+    <div class="modal-dialog picture-modal-dialog">
+      <!-- Clearly visible close button in top-right corner -->
+      <button id="pictureModalCloseIconBtn" class="modal-close-icon picture-close-icon" type="button" aria-label="Close picture popup">✕</button>
+
+      <!-- Beautiful Soft Pink Picture Frame Card -->
+      <article class="picture-frame-card">
+        <div class="picture-frame-header">
+          <span class="picture-badge">Special Birthday Memory 🎀</span>
+          <span class="picture-sparkle-decor" aria-hidden="true">✨ 💖 ✨</span>
+        </div>
+
+        <div class="picture-image-wrap">
+          <img id="popupSurpriseImg" class="popup-surprise-img" src="assets/images/surprise.png" alt="A little memory, saved just for you, DUMBO" loading="lazy">
+        </div>
+
+        <div class="picture-caption-block">
+          <p id="pictureModalCaption" class="picture-modal-caption">
+            “A little memory, saved just for you, DUMBO. 💗”
+          </p>
+        </div>
+
+        <!-- Button labeled 'Back to the Surprise 🎁' -->
+        <div class="picture-actions-row">
+          <button id="pictureModalBackBtn" class="modal-btn modal-btn-primary picture-back-btn" type="button">
+            <span>Back to the Surprise 🎁</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       SPOTIFY-INSPIRED FLOATING MUSIC PLAYER
+       Fixed in bottom-right corner of viewport with compact floating bar,
+       miniature progress bar, and upward-expanding full controls card.
+       ====================================================================== -->
+  <aside id="musicPlayer" class="spotify-floating-player spotify-top-player is-hidden" aria-label="Birthday Spotify Music Player">
+    <!-- Compact Floating Pill Bar in Bottom-Right -->
+    <div class="player-top-pill" id="playerMiniBar">
+      <div class="pill-art-wrap" id="playerMiniArt">
+        <span id="playerMiniEmoji" class="pill-emoji">💖</span>
+        <div class="pill-vinyl-center" aria-hidden="true"></div>
+      </div>
+      <div class="pill-meta">
+        <span class="pill-title" id="playerMiniTitle">Kannaana Kanne</span>
+        <span class="pill-status" id="playerMiniStatus">Paused</span>
+      </div>
+      <!-- Miniature Progress Bar on Compact Bar -->
+      <div class="pill-progress-track" aria-hidden="true" title="Playback progress">
+        <div class="pill-progress-fill" id="playerMiniProgressFill"></div>
+      </div>
+      <div class="pill-btns">
+        <button id="playerMiniPlayBtn" class="pill-play-btn" type="button" aria-label="Play or pause music" title="Play / Pause">
+          <span id="playerMiniPlayIcon" aria-hidden="true">▶</span>
+        </button>
+        <button id="playerExpandBtn" class="pill-expand-btn" type="button" aria-label="Expand Spotify player controls" aria-expanded="false" title="Music controls">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M7 14l5-5 5 5z"/>
+          </svg>
+        </button>
+        <button id="playerMiniExpandBtn" style="display:none;" aria-hidden="true"></button>
+      </div>
+    </div>
+
+    <!-- Dropdown / Popover Card with Full Controls (opens upward) -->
+    <div class="player-dropdown-card" id="playerDropdownCard" role="region" aria-label="Music player controls">
+      <!-- Track & Album Info -->
+      <div class="dropdown-track-header">
+        <div class="player-album-art" aria-hidden="true">
+          <span id="playerAlbumEmoji" class="album-emoji">💖</span>
+          <div class="album-vinyl-center"></div>
+        </div>
+        <div class="dropdown-track-meta">
+          <span id="playerBadge" class="player-track-badge">Track 1 💖</span>
+          <div id="playerSongTitle" class="player-song-title">Kannaana Kanne</div>
+          <div id="playerSongArtist" class="player-song-artist">Viswasam • D. Imman, Sid Sriram</div>
+        </div>
+      </div>
+
+      <!-- Progress Scrubber -->
+      <div class="player-scrubber-row">
+        <span id="playerCurrentTime" class="player-time time-current">0:00</span>
+        <div class="player-progress-wrap">
+          <input 
+            type="range" 
+            id="playerProgressBar" 
+            class="player-slider seek-slider" 
+            min="0" 
+            max="100" 
+            step="0.1" 
+            value="0" 
+            aria-label="Song progress scrub bar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          />
+          <div class="player-slider-fill" id="playerSeekFill"></div>
+        </div>
+        <span id="playerDuration" class="player-time time-total">0:00</span>
+      </div>
+
+      <!-- Playback Controls -->
+      <div class="dropdown-playback-row">
+        <button id="playerPrevBtn" class="player-icon-btn btn-prev" type="button" aria-label="Previous Track" title="Previous Track (Kannaana Kanne)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+          </svg>
+        </button>
+        <button id="playerPlayBtn" class="player-btn-main-play" type="button" aria-label="Play music" aria-pressed="false" title="Play / Pause">
+          <svg class="icon-play" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg class="icon-pause" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button id="playerNextBtn" class="player-icon-btn btn-next" type="button" aria-label="Next Track" title="Next Track (Magale)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Volume Row -->
+      <div class="dropdown-volume-row">
+        <button id="playerMuteBtn" class="player-icon-btn btn-mute" type="button" aria-label="Toggle mute" aria-pressed="false" title="Mute / Unmute">
+          <svg class="icon-vol-on" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+          <svg class="icon-vol-mute" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+          </svg>
+        </button>
+        <div class="player-volume-slider-box">
+          <input 
+            type="range" 
+            id="playerVolumeSlider" 
+            class="player-slider volume-slider" 
+            min="0" 
+            max="1" 
+            step="0.01" 
+            value="0.35" 
+            aria-label="Volume slider"
+            aria-valuemin="0"
+            aria-valuemax="1"
+            aria-valuenow="0.35"
+          />
+          <div class="player-slider-fill" id="playerVolumeFill"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       BACKGROUND MUSIC AUDIO ELEMENT
+       Default song: assets/audio/Kannaana Kanne.m4a
+       Switches to assets/audio/Magale.m4a when gift box opens
+       ====================================================================== -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/Kannaana Kanne.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <p>Crafted with endless care & sparkles <span class="footer-heart">💖</span></p>
+    <p class="footer-subtext">Wishing you the happiest birthday ever!</p>
+  </footer>
+
+  <!-- ======================================================================
+       DUMBO ELEPHANT VISITOR'S GUIDE
+       Persistent animated baby elephant companion (DUMBO) from assets/images/elephant.jpg.
+       Features lively 3D floating animation, natural ear & body swaying, breathing,
+       dynamic ground shadow, and smooth left-side navigation.
+       ====================================================================== -->
+  <aside id="teddyGuide" class="elephant-guide teddy-guide pos-welcome" aria-label="DUMBO Elephant Visitor's Guide">
+    <!-- Dynamic Speech Bubble (Positioned above character on the left side) -->
+    <div id="teddySpeechBubble" class="elephant-speech-bubble teddy-speech-bubble" role="status" aria-live="polite">
+      <p id="teddySpeechText" class="teddy-speech-text">Psst, MADHU! ROSHAN has something special for you! 🐘💗</p>
+      <span class="speech-tail" aria-hidden="true"></span>
+    </div>
+
+    <!-- Interactive Elephant Guide Button -->
+    <button id="teddyGuideBtn" class="elephant-guide-btn teddy-guide-btn" type="button" aria-label="DUMBO Elephant Companion: Click to hear an encouraging message!">
+      <div class="elephant-3d-stage">
+        <!-- Soft Ground Shadow (scales with 3D breathing and hopping) -->
+        <div class="elephant-ground-shadow guide-shadow" aria-hidden="true"></div>
+
+        <!-- 3D Animated Elephant Figure from assets/images/elephant.jpg -->
+        <div class="elephant-figure-wrap">
+          <img src="assets/images/elephant_transparent.png" alt="Cute DUMBO Elephant Companion" class="elephant-mascot-img" width="105" height="82" loading="eager">
+        </div>
+      </div>
+      <span class="guide-click-hint" id="guideClickHint" aria-hidden="true">Tap Me! 🐘</span>
+    </button>
+  </aside>
+
+  <!-- JavaScript Initialization -->
+  <script src="js/script.js"></script>
+</body>
+</html>
